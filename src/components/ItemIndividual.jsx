@@ -8,7 +8,7 @@ const ItemIndividual = ( {producto} ) => {
               <h4>{producto.titulo}</h4>
               <p>Precio: ${producto.precio}</p>
               <p>Categoría: {producto.categoria}</p>
-              <Link to={producto.titulo}  className="ver-mas"> <p className="ver-mas">Ver más</p></Link>
+              <Link className="ver-mas" to={`/item/${producto.id}`}>Ver más</Link>
           </div>
       </div>
     )
