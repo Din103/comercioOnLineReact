@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { CartContext } from "../context/CartContext"
+import { Link } from "react-router-dom";
 
 export default function Carrito() {
 
@@ -27,7 +28,10 @@ export default function Carrito() {
         {carrito.length>0 ?
         <>
             <h2>Precio total: ${precioTotal()} </h2> 
-        <button onClick={handleVaciar}>Vaciar</button> 
+            <button onClick={handleVaciar}>Vaciar</button>
+            <Link to="/checkout">Finalizar compra</Link>
+
+
         </>
         :
         <div>
